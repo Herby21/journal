@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block table %}
+    <h2 align="center">Works log</h2>
+    {% for job in jobs %}
+        <h4>Action #{{loop.index}}</h4>
+        <table>
+          <tr>
+            <th>Title of activity</th>
+            <th>Team of leader</th>
+            <th>Duration</th>
+            <th>List of collaborators</th>
+            <th>Is finished</th>
+          </tr>
+          <tr>
+              {% for elem in job %}
+                <td>{{elem}}</td>
+              {% endfor %}
+          </tr>
+        </table>
+    {% endfor %}
+{% endblock %}
